@@ -1,8 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import { Metadata } from "next";
 import React,{ReactNode} from "react";
 
-const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
+export const metadata: Metadata = {
+  title: "ZOOM",
+  description: "Video calling app",
+  icons: {
+    icon: '/icons/logo.svg'
+  }
+};
+
+const HomeLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
     <main className="relative">
       <Navbar/> 
@@ -16,4 +25,4 @@ const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   );
 };
 
-export default RootLayout;
+export default HomeLayout;
